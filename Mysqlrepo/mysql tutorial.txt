@@ -1,0 +1,4 @@
+mysql Enterprise Edition
+
+http://dev.mysql.com
+https://dev.mysql.com/doc/refman/8.0/en/date-calculations.html

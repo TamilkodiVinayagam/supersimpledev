@@ -1,0 +1,65 @@
+Excercises
+
+1. Display all the information of the EMP table?
+ans: select * from emp;
+
+2. Display unique Jobs from EMP table?
+ans:  select distinct job from emp;  
+
+3. List the emps in the asc order of their Salaries?
+ans: select * from emp order by sal; 
+   
+4. List the details of the emps in asc order of the Dptnos and desc of
+Jobs?
+ans: select dep_no,job from emp order by dep_no asc,job desc;
+     select * from emp order by dep_no asc,job desc;
+
+5. Display all the unique job groups in the descending order   
+ans: select distinct job from emp order by job desc;
+
+6. Display all the details of all ‘Mgrs’
+ans: select * from emp where emp_no in(select mgr from emp);
+      
+7. List the emps who joined before 1981.
+ans: select * from emp where hire_date < '1981-01-01';
+      
+8. List the Empno, Ename, Sal, Daily sal of all emps in the asc order of
+Annsal.
+ans: select Emp_No, Emp_name,Sal as Monthly_Salary ,Sal/30 as dailysalary, 
+     12*Sal as annsal from emp order by annsal asc;
+      
+
+9. Display all the details of the emps whose Comm. Is more than their Sal.
+ans: select * from emp where comm>sal;
+
+10. List the emps in the asc order of Designations of those joined after the
+second half of 1981.
+ans: select * from emp where hire_date>'1981-12-31' order by job;
+       
+11. List the emps along with their Exp and Daily Sal is more than Rs.100.
+ans: SELECT emp_no,emp_name,sal,datediff(curdate(),hire_date) as "Experience"
+     FROM emp WHERE (sal/30)>100;   
+
+12. List the emps who are either ‘CLERK’ or ‘ANALYST’ in the Desc
+order.
+ans: select * from emp where job='clerk' or job='analyst' order by job desc;
+        
+13. List the emps who joined on 1-MAY-81,3-DEC-81,17-DEC-81,19-JAN80 in asc order of seniority.
+ans: select * from emp where hire_date in('1981-05-01','1981-12-03','1981-12-17','1980-01-19' ) 
+     order by hire_date asc;
+
+14. List the emp who are working for the Deptno 10 or20.
+ans: select * from emp where dep_no=10 or dep_no=20;
+          
+15. List the emps who are joined in the year 81.
+ans: select * from emp where hire_date between '1981-01-01' and '1981-12-31';
+         
+16. List the emps who are joined in the month of Aug 1980.
+ans:  select * from emp where hire_date between '1980-08-01' and '1980-08-31';   
+    
+17. List the emps Who Annual sal ranging from 22000 and 45000.
+ans: select * from emp where 12*Sal between 22000 and 45000;
+
+18. List the Enames those are having five characters in their Names.
+ans: SELECT emp_name FROM emp WHERE LENGTH(emp_name)=5;
+          

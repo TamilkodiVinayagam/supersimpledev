@@ -1,0 +1,75 @@
+create database boss;
+use boss;
+create table student(sno int not null auto_increment primary key,studentname varchar(20),city varchar(20),studentrank varchar(10),marks int);
+insert into student(sno,studentname,city,studentrank,marks) values(1,	'Vasanth',	'Erode',	'No Rank',	37),
+(2,	'Guru',	'Tiruppur',	'No Rank',	28),
+(3,	'Gokul',	'Tiruchirapalli',	'Average',	40),
+(4,	'Mani',	'Kumarapalayam',	'No Rank',	31),
+(5,	'Moorthy',	'Salem',	'Very Good',	86),
+(6,	'Amutha',	'Chennai',	'Average',	61),
+(7,	'Jaga',	'Madurai',	'Very Good',	89),
+(8,	'Pavithra',	'Erode',	'Average',	68),
+(9,	'Arthi',	'Tiruppur',	'Average',	53),
+(10,	'Kabilan',	'Tiruchirapalli',	'Average',	67),
+(11,	'Manasi',	'Kumarapalayam',	'Excellent',	97),
+(12,	'Suja',	'Salem',	'Very Good',	85),
+(13,	'Arun',	'Chennai',	'No Rank',	32),
+(14,	'Deepa',	'Madurai',	'Average',	49),
+(15,	'Sindhu',	'Erode',	'Average',	65),
+(16,	'Madhavi',	'Tiruppur',	'Good',	78),
+(17,	'Swetha',	'Tiruchirapalli',	'Good',	73),
+(18,	'Selvi',	'Kumarapalayam',	'Average',	47),
+(19,	'Pooja',	'Salem',	'Very Good',	88),
+(20,	'Lakshmi',	'Chennai',	'Excellent',	99),
+(21,	'Veeramani',	'Madurai',	'Average',	67),
+(22,	'Pandian',	'Erode',	'Good',	72),
+(23,	'Veera',	'Tiruppur',	'Average',	51),
+(24,	'Devi',	'Tiruchirapalli',	'Excellent',	96),
+(25,	'Devan',	'Kumarapalayam',	'Excellent',	100),
+(26,	'Keerthi',	'Salem',	'Very Good',	89),
+(27,	'Venkatesh',	'Chennai',	'Good',	75),
+(28,	'Raja',	'Madurai',	'Average',	42);
+select * from student;
+select * from student where city='Chennai' and marks>=35;
+select * from student where city='Chennai' and marks<=35;
+select * from student where (city='Chennai' or city='Salem') and marks>=35;
+select studentname,city,marks from student where city in ('chennai','madurai','salem');
+alter table student add age int not null;
+select * from student where marks>=35 and age<=20;
+select * from student order by studentname;
+select studentname,marks from student order by marks desc;
+select studentname,marks from student order by marks asc;
+select count(studentname) from student;
+select count(city) from student;
+select count(distinct city) as count_of_city from student;
+select * from student limit 10,5;
+select * from student limit 15,1;
+select * from student limit 3;
+select min(marks) from student;
+select max(marks) from student;
+select * from student order by sno desc limit 0,5;
+select city,count(sno) from student group by city;
+select sum(marks) as total from student;
+select sum(marks) total from student;
+select sum(marks) from student where sno in(8,11,28);
+select sum(marks) from student where sno not in(8,11,28);
+select sum(marks) from student;
+select * from student where city not in('chennai','madurai');
+select * from student where studentname like '%ja';
+select * from student where studentname like 'ja%';
+select * from student where studentname like '%av%';
+select * from student where studentname like '%ka%';
+select * from student where studentname not like '%ja';
+select * from student where studentname not like 'ja%';
+select * from student where studentname not like '%av%';
+select * from student where marks between 35 and 95;
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+create database chss;
+use chss;
+create table student(s_no int not null auto_increment, name varchar(20) not null,marks int not null,gender varchar(20), primary key(s_no));
+describe student;
+select * from student;
+alter table student rename column name to student_name;
+insert into student(student_name,marks,mobile,gender,age) values ('dubuku',50,'4567891230','female',20);
+alter table student rename to studentinfo;
+describe studentinfo;
+select * from studentinfo;
+alter table studentinfo drop age;
+alter table studentinfo drop mobile;
+alter table studentinfo add age int not null,add mobile varchar(10);
+update studentinfo set age=20,mobile='7894561230' where s_no=1;
+delete from studentinfo where s_no=5;

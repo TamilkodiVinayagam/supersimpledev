@@ -1,0 +1,37 @@
+(7369,	'SMITH',	'CLERK',	7902,	'1980-12-17',	800,	Null,	20),
+(7499,	'ALLEN',	'SALESMAN',	7698,	'1981-02-20',	1600,	300,	30),
+(7521,	'WARD',	'SALESMAN',	7698,	'1981-02-22',	1250,	500,	30),
+(7566,	'JONES',	'MANAGER',	7839,	'1981-04-02',	2975,	Null,	20),
+(7654,	'MARTIN',	'SALESMAN',	7698,	'1981-09-28',	1250,	Null,	30),
+(7698,	'BLAKE',	'MANAGER',	7839,	'1981-05-01',	2850,	1400,	30),
+(7782,	'CLARK',	'MANAGER',	7839,	'1981-06-09',	2450,	Null,	10),
+(7788,	'SCOTT',	'ANALYST',	7566,	'1982-12-09',	3000,	Null,	20),
+(7839,	'KING',	'PRESIDENT',	Null,	'1981-11-17',	5000,	Null,	10),
+(7844,	'TURNER',	'SALESMAN',	7698,	'1981-09-08',	1500,	0,	30),
+(7876,	'ADAMS',	'CLERK',	7788,	'1983-01-12',	1100,	Null,	20),
+(7900,	'JAMES',	'CLERK',	7698,	'1981-12-03',	950,	Null,	30),
+(7902,	'FORD',	'ANALYST',	7566,	'1981-12-03',	3000,	Null,	20),
+(7934,	'MILLER',	'CLERK',	7782,	'1982-01-23',	1300,	Null,	10);
+
+
+
+
+
+create table emp (Emp_No int, Emp_Name varchar(20), Job varchar(20), Mgr int, Hire_Date date, Sal int, Comm int, Dep_No int,
+Primary key (Emp_No));
+Insert into Emp (Emp_No, Emp_name, Job, mgr, Hire_date, Sal, Comm, Dep_no)
+values (7369,	'SMITH',	'CLERK',	7902,	'1980-12-17',	800,	Null,	20),
+(7499,	'ALLEN',	'SALESMAN',	7698,	'1981-02-20',	1600,	300,	30),
+(7521,	'WARD',	'SALESMAN',	7698,	'1981-02-22',	1250,	500,	30),
+(7566,	'JONES',	'MANAGER',	7839,	'1981-04-02',	2975,	Null,	20),
+(7654,	'MARTIN',	'SALESMAN',	7698,	'1981-09-28',	1250,	Null,	30),
+(7698,	'BLAKE',	'MANAGER',	7839,	'1981-05-01',	2850,	1400,	30),
+(7782,	'CLARK',	'MANAGER',	7839,	'1981-06-09',	2450,	Null,	10),
+(7788,	'SCOTT',	'ANALYST',	7566,	'1982-12-09',	3000,	Null,	20),
+(7839,	'KING',	'PRESIDENT',	Null,	'1981-11-17',	5000,	Null,	10),
+(7844,	'TURNER',	'SALESMAN',	7698,	'1981-09-08',	1500,	0,	30),
+(7876,	'ADAMS',	'CLERK',	7788,	'1983-01-12',	1100,	Null,	20),
+(7900,	'JAMES',	'CLERK',	7698,	'1981-12-03',	950,	Null,	30),
+(7902,	'FORD',	'ANALYST',	7566,	'1981-12-03',	3000,	Null,	20),
+(7934,	'MILLER',	'CLERK',	7782,	'1982-01-23',	1300,	Null,	10);
+Select * from Emp;

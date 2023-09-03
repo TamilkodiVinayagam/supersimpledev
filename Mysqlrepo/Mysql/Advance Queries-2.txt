@@ -1,0 +1,47 @@
+select Student_Det.Student_Name, Student_Det.City_State, Student_Det.Roll_No, Student_Det.Course_ID, Course_Info.Course_Name, Marks_Info.Finance, Marks_Info.Cost, Marks_Info.Corporate,
+(Marks_Info.Finance+Marks_Info.Cost+Marks_Info.Corporate) as Total_Marks, 
+Round((Marks_Info.Finance+Marks_Info.Cost+Marks_Info.Corporate)/3,0) as Average,
+
+case
+When Marks_Info.Cost >=35 and Marks_Info.Finance >=35
+ and Marks_Info.Corporate >=35 Then 'Pass'
+
+Else  'Fail'
+
+
+End as Marks_Results,
+
+case
+When Marks_Info.Cost >=35 and Marks_Info.Finance >=35
+ and Marks_Info.Corporate >=35 Then 
+
+Case
+
+When Round((Marks_Info.Finance+Marks_Info.Cost+Marks_Info.Corporate)/3,0) >=85
+and Round((Marks_Info.Finance+Marks_Info.Cost+Marks_Info.Corporate)/3,0)<=100 Then
+'A'
+
+When Round((Marks_Info.Finance+Marks_Info.Cost+Marks_Info.Corporate)/3,0) >=75
+and Round((Marks_Info.Finance+Marks_Info.Cost+Marks_Info.Corporate)/3,0)<=84 Then
+'B'
+
+When Round((Marks_Info.Finance+Marks_Info.Cost+Marks_Info.Corporate)/3,0) >=65
+and Round((Marks_Info.Finance+Marks_Info.Cost+Marks_Info.Corporate)/3,0)<=74 Then
+'C'
+
+
+Else  'D'
+
+
+End 
+
+
+Else 'No_Grade'
+End As Marks_Grade
+
+
+ from Student_Det ,
+inner join Course_info on Student_Det.Course_ID = Course_Info.Course_ID 
+inner join Marks_info on Student_Det.Student_Id=
+Marks_Info.student_ID
+Where Course_Info.Course_Name = 'CMA' having Result = 'Pass'
