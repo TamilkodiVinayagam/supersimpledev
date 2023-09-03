@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .img1{
+        width:250px;
+        border-radius: 15px;
+    }
+    .img2{
+        width:200px;
+        height:200px;
+        object-position:center;
+        object-fit: cover;
+    }
+    .img3{
+        width:200px;
+        height:200px;
+        object-position:center;
+        object-fit: cover;
+        border-radius:100px;
+    }
+    .text{
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-radius: 8px;
+        border:1px solid lightgrey;
+        font-size:16px;
+    }  
+    .shadow{
+        font-size:16px;
+        padding-left: 15px;
+        padding-right:15px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border:none;
+        border-radius: 25px;
+        box-shadow:0 1px 5px rgba(0,0,0,0.25);
+        width: 500px;
+        margin-top: 20px;
+  margin-left: 20px;
+    }
+    .linkedininput{
+       margin-top:0;
+       border-radius:5px;
+       border:2px solid rgb(100, 100, 100);
+       padding:7px;
+       width:400px;
+       font-size:16px;
+    }
+    .linkedinbutton{
+background-color: rgb(10, 102, 194);
+color:white;
+border:none;
+border-radius:30px;
+padding:16px;
+width: 400px;
+font-size:20px;
+}
+.common{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(100, 100, 100);  
+    margin-top:0;
+    margin-top:0;
+}
+.p1style{
+    margin-bottom:10px;
+    font-size:16px;
+}
+.p2style{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.tweeterinput{
+    
+    width:300px;
+    border:none;
+    font-size:18px;
+    vertical-align: middle;
+}
+.img3tweet{
+        width:50px;
+        height:50px;
+        margin-right: 5px;
+        object-fit: cover;
+        border-radius:25px;
+        vertical-align: middle;
+        }  
+.tweet-button {
+  background-color: rgb(29, 155, 240);
+  color: white;
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+    </style>
+    <title>Lesson 7 Images and Text Boxes</title>
+</head>
+<body>
+    <img class="img1" src="images/pexels-katie-burandt-1212693.jpg" alt="Cutee">
+    <img class="img2" src="images/pexels-katie-burandt-1212693.jpg" alt="Cutee">
+    <img class="img3" src="images/pexels-katie-burandt-1212693.jpg" alt="Cutee">
+    <div>
+    <input class="text" type="text" placeholder="Search">
+    </div>
+    <div>
+    <input class='shadow' type="text" placeholder="Search Google or type a URL">
+</div>
+<div class="common">
+    <p class="p1style">Email</p>
+    <input class='linkedininput' type="text">
+    <p class="p2style">By clicking Agree & Join, you agree to the Privacy Policy.</p>
+    <button class="linkedinbutton">Agree & Join </button>
+</div>
+<div style="position:relative";>
+    <img class="img3tweet" src="images/pexels-katie-burandt-1212693.jpg" alt="Cutee">
+    <input class="tweeterinput" type="text" placeholder="What's happening?">
+    <button class="tweet-button">tweet</button>
+    </div>
+</body>
+</html>
