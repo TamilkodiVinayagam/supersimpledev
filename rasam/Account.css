@@ -1,0 +1,153 @@
+.headerflex{
+display:flex;
+flex-direction:row;
+background-color:#ffe4c4;
+padding:2px;
+justify-content:space-between;
+align-items:baseline;
+}
+.headerlink a{
+color:black;
+text-decoration:none;
+padding:30px;
+
+}
+.heading a{
+text-decoration-line:underline overline;
+text-transform:capitalize;
+font-variant:small-caps;
+color:black;
+font-size:25px;
+margin-left:50px;
+margin-right:50px;
+margin-top:60x;
+}
+span.inconimgs {
+    font-size: 14px;
+    color: #3a2201;
+    font-weight: 400;
+    margin-left: 4px;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+.headerinput{
+ position:relative; 
+}
+.headerinput input[type=text]{
+width: 1000px;
+padding: 12px 30px;
+margin:30px 20px 40px 30px;
+border:1px solid black;
+border-radius:100px;
+}
+.headerinput i{
+position:absolute;
+left:38px;
+top:50px;
+transform: translateY(-50%);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 8px 15px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: tomato;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.loginform{
+width:350px;
+margin:100px auto;
+box-shadow: 0 5px 16px 6px #0000001a;
+padding:10px 20px 30px;
+background-color:white;
+}
+.input input{
+width:100%;
+font-size:1em;
+border:1px solid #f4f4f4;
+
+padding:10px 10px;
+box-sizing:border-box;
+margin:5px 0px 15px;
+}
+a.one:link{
+color:black;
+background-color:transparent;
+text-decoration:underline;
+
+}
+a.one:visited
+{
+color:black;
+background-color:transparent;
+text-decoration:underline;
+}
+a.one:hover{
+color:black;
+background-color:transparent;
+text-decoration:underline;
+}
+
+.button{
+width:100%;
+background-color:orange;
+color:white;
+border:1px solid orange;
+border-radius:8px;
+margin:20px 0px 20px;
+padding:15px 5px;
+font-size:15px;
+font-weight:bold;
+}
+.linkalign{
+text-align:center;
+}
+.flexcontainer{
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+margin-top:20px;
+}

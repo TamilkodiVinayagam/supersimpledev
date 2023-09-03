@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body{
+background-color:powderblue;
+color:green;
+text-align:center;
+
+}
+.one{
+opacity:0.6;
+text-align:left;
+text-decoration-line:underline;
+text-decoration-color:tomato;
+text-decoration-style:dotted;
+text-decoration-thickness:15%;
+text-shadow:2px 2px 5px tomato;
+}
+#decoration{
+text-align:justify;
+border:1px solid red;
+height:100px;
+width:200px;
+padding:10px;
+text-decoration-line:line-through;
+text-decoration-style:dashed;
+text-decoration-thickness:2px;
+}
+.a {
+text-align-last: right;
+text-decoration-line:overline underline;
+text-decoration-style:wavy;
+}
+.b {
+text-align-last: center;
+}
+.c {
+text-align-last: justify;
+}
+p.uppercase {
+text-transform: uppercase;
+text-decoration-line:overline;
+text-decoration-style:double;
+text-decoration-thickness:auto;
+}
+p.lowercase {
+text-transform: lowercase;
+}
+p.capitalize {
+text-transform: capitalize;
+}
+p.textspacing {
+text-indent: 100px;
+letter-spacing: 5px;
+line-height:1.7;
+word-spacing:5px;
+white-space:nowrap;
+}
+p.normal {
+font-style: normal;
+font-weight:normal;
+font-variant:normal;
+}
+p.italic {
+font-style: italic;
+font-weight:bold;
+font-variant:small-caps;
+}
+p.oblique {
+font-style: oblique;
+}
+ul.liststyleout{
+list-style-position: outside;
+}
+ul.liststylein{
+list-style-position: inside;
+}
+tr:hover {background-color: coral;}
+td:hover {background-color: blue;}
+table:hover {background-color:white;}
+#boxmodel{
+background-color: lightgrey;
+width: 300px;
+border: 15px solid green;
+margin: 20px;
+padding: 50px;
+}
+p.dotted {border-style: dotted;
+border-width:5px 10px 15px 20px;}
+p.dashed {border-style: dashed;
+border-color:red;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+#individualsides {
+border-top-style: dotted;
+border-right-style: solid;
+border-bottom-style: dotted;
+border-left-style: solid;
+border-radius:10px;
+}
+</style
+</head>
+<body>
+<h1 class="one">opacity 0.6</h1>
+<h1> opacity 1 default<h1>
+<h1 style="text-align:right">right text alignment</h1>
+<div id="decoration">
+In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind
+ever since.
+</div>
+<h2>text-align-last: right:</h2>
+<p class="a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum
+volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+<h2>text-align-last: center:</h2>
+<p class="b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum
+volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+<h2>text-align-last: justify:</h2>
+<p class="c">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum
+volutpat tellus diam, consequat gravida libero rhoncus ut.</p>
+<p class="uppercase">This text is transformed to uppercase.</p>
+<p class="lowercase">This text is transformed to lowercase.</p>
+<p class="capitalize">This text is capitalized.</p>
+<h1>Using text-indent</h1>
+<p class="textspacing">In my younger and more vulnerable years my father gave me some advice that I've been
+turning over in my mind ever since. 'Whenever you feel like criticizing anyone,
+' he told me,
+'just
+remember that all the people in this world haven't had the advantages that you've had.'</p>
+<p class="normal">This is a paragraph in normal style.</p>
+<p class="italic">This is a paragraph in italic style.</p>
+<p class="oblique">This is a paragraph in oblique style.</p>
+<h2>list-style-position: outside (default):</h2>
+<ul class="liststyleout">
+<li>Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea
+plant</li>
+<li>Tea - An aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the
+Camellia sinensis, an evergreen shrub (bush) native to Asia</li>
+<li>Coca Cola - A carbonated soft drink produced by The Coca-Cola Company. The drink's name refers to two of its
+original ingredients, which were kola nuts (a source of caffeine) and coca leaves</li>
+</ul>
+<h2>list-style-position: inside:</h2>
+<ul class="liststylein">
+<li>Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea
+plant</li>
+<li>Tea - An aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the
+Camellia sinensis, an evergreen shrub (bush) native to Asia</li>
+<li>Coca Cola - A carbonated soft drink produced by The Coca-Cola Company. The drink's name refers to two of its
+original ingredients, which were kola nuts (a source of caffeine) and coca leaves</li>
+</ul>
+<table>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Points</th>
+</tr>
+<tr>
+<td>Peter</td>
+<td>Griffin</td>
+<td>$100</td>
+</tr>
+<tr>
+<td>Lois</td>
+<td>Griffin</td>
+<td>$150</td>
+</tr>
+<tr>
+<td>Joe</td>
+<td>Swanson</td>
+<td>$300</td>
+</tr>
+<tr>
+<td>Cleveland</td>
+<td>Brown</td>
+<td>$250</td>
+</tr>
+</table>
+<div id="boxmodel">This text is the content of the box. We have added a 50px padding,
+20px margin and a 15px green border. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culp</div>
+<p class="dotted">A dotted border.</p>
+<p class="dashed">A dashed border.</p>
+<p class="solid">A solid border.</p>
+<p class="double">A double border.</p>
+<p class="inset">An inset border.</p>
+<p class="outset">An outset border.</p>
+<p class="none">No border.</p>
+<p class="hidden">A hidden border.</p>
+<p class="mix">A mixed border.</p>
+<p id="individualsides">2 different border styles.</p>
+</body>
+</html>
