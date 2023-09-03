@@ -1,0 +1,43 @@
+1)Read a given string, change the character at a given index and then print the modified string.
+ans:     
+def mutate_string(string, position, character):
+    i=0
+    modstr=''
+    while i<len(string):
+        if i==position:
+            modstr+=character
+        else:
+            modstr+=string[i]
+        i+=1
+        
+    return modstr
+2)You are given a string s .
+Your task is to find out if the string  s contains: alphanumeric characters, alphabetical characters, digits, lowercase and uppercase characters.
+ans:
+
+if __name__ == '__main__':
+    s = input()
+    contains_alphanumeric = any(c.isalnum() for c in s)
+    contains_alphabetical = any(c.isalpha() for c in s)
+    contains_digits = any(c.isdigit() for c in s)
+    contains_lowercase = any(c.islower() for c in s)
+    contains_uppercase = any(c.isupper() for c in s)
+    print(contains_alphanumeric)
+    print(contains_alphabetical)
+    print(contains_digits)
+    print(contains_lowercase)
+    print(contains_uppercase)
+
+3)You are given a string  and width .
+Your task is to wrap the string into a paragraph of width .
+
+ans :
+import textwrap
+
+def wrap(string, max_width):
+    
+        text=(textwrap.fill(string,width=max_width))
+        
+        return text
+    
+if __name__ == '__main__':

@@ -1,0 +1,26 @@
+Class Component Syntax :
+
+import React, { Component } from 'react'
+
+class "componentname" extends Component {
+  render() {
+    return (
+      "content"
+    )
+  }
+}
+
+export default "componentname"
+
+
+Functional component Syntax :
+
+import React from 'react'
+
+function "componentname"() {
+  return (
+    "content"
+  )
+}
+
+export default "componentname"

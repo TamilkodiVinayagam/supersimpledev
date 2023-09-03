@@ -1,0 +1,83 @@
+CssExample 
+
+import React, { Component } from 'react'
+import ownstyle from '../stylesheet/Styles.css'
+import styles from '../stylesheet/style.module.css'
+
+class CssExample extends Component {
+  render() {
+
+    const myStyle = {
+        color: 'blue',
+        fontFamily: 'Times New Roman'
+    }
+
+    return (
+      <div>
+        <h2 style={{color:'red'}}>CssExample</h2>
+        <button className={ownstyle.buttonStyle}>Submit</button>
+        <h3 style={myStyle}>Sample</h3>
+        <h1 className={styles.mystyle}>Css Module</h1>
+        <h2>Example</h2>
+      </div>
+    )
+  }
+}
+
+export default CssExample
+
+StyledComponentExample
+
+
+import React, { Component } from 'react'
+import styled from 'styled-components'
+
+class StyledComponentExample extends Component {
+  render() {
+
+    const Style1 = styled.h1`
+        font-family: Georgia;  
+        font-size: 40px;  
+        text-align: center;  
+        color: palevioletred; 
+        &:hover {  
+            background-color: ${(props) => props.hoverColor};  
+            }   
+        `;
+
+    return (
+      <div>
+        <h2>StyledComponentExample</h2>
+        <Style1 hoverColor= "red">StyledComponentExample</Style1>
+      </div>
+    )
+  }
+}
+
+export default StyledComponentExample
+
+
+Style.module.css
+
+.mystyle {  
+    background-color: blueviolet;  
+    color: Red;  
+    padding: 10px;  
+    font-family: Georgia, 'Times New Roman', Times, serif;  
+    text-align: center;  
+  }  
+    
+  .parastyle{  
+    color: Green;  
+    font-family: Arial;  
+    font-size: 35px;  
+    text-align: center;  
+  }  
+
+Style.css
+
+.buttonStyle{
+    border-radius: 20px;
+    background-color: aqua;
+    font-family: 'Times New Roman', Times, serif;
+}

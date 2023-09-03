@@ -1,0 +1,90 @@
+Class: 
+-----
+A class is a blueprint that defines the properties and methods of an object.
+ It acts as a template for creating objects of that class.
+-------------------------------------------
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def say_hello(self):
+        print(f"Hello, my name is {self.name} and I am {self.age} years old.")
+
+# Creating objects of the Person class
+person1 = Person("Alice", 25)
+person2 = Person("Bob", 30)
+
+# Accessing object properties and methods
+print(person1.name)  # Output: Alice
+person2.say_hello()  # Output: Hello, my name is Bob and I am 30 years old.
+-------------------------------------------
+The __init__ method is a special method in Python classes that is 
+automatically called when an object of that class is created.
+The __init__ method is a special method used for initializing the object's attributes.
+
+Object:
+----------
+ An object is an instance of a class. It represents a specific entity based on the class blueprint. 
+
+ self refers to the instance of the class (i.e., the object itself).
+-----
+Encapsulation: 
+-----------------
+Encapsulation refers to the bundling of data and methods within a class, 
+hiding the internal implementation details from the outside world. 
+It helps in achieving data abstraction and information hiding.
+
+Encapsulating attributes as private helps to ensure data integrity and 
+provides a clear interface for interacting with the object's data through public methods.
+ It hides the internal implementation details and prevents unintentional modifications from external code.
+
+class Car:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+        self.__mileage = 0  # Encapsulated attribute
+    
+    def drive(self, distance):
+        self.__mileage += distance
+    
+    def get_mileage(self):
+        return self.__mileage
+
+# Creating a Car object
+my_car = Car("Toyota", "Camry")
+
+# Accessing public methods
+my_car.drive(100)
+print(my_car.get_mileage())  # Output: 100
+
+# Accessing encapsulated attribute (not recommended)
+print(my_car._Car__mileage)  # Output: 100
+# Trying to access the private attribute directly
+print(my_car.__mileage)  # Raises an AttributeError
+
+
+Inheritance:
+---------------
+ Inheritance allows a class to inherit attributes and methods from another class.
+ The derived class (child class) can reuse the code of the base class (parent class) and add its own functionality.
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+    
+    def eat(self):
+        print(f"{self.name} is eating.")
+
+class Dog(Animal):
+    def bark(self):
+        print("Woof! Woof!")
+
+# Creating objects of the Dog class
+dog = Dog("Buddy")
+
+# Accessing inherited methods
+dog.eat()  # Output: Buddy is eating.
+
+# Accessing the child class method
+dog.bark()  # Output: Woof! Woof!

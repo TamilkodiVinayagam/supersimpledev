@@ -1,0 +1,14 @@
+1)Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
+ans :SELECT DISTINCT city FROM station WHERE LOWER(LEFT(city, 1)) NOT IN ('a', 'e', 'i', 'o', 'u');
+     SELECT DISTINCT city FROM station WHERE city NOT LIKE 'A%' AND city NOT LIKE 'E%' AND city NOT LIKE 'I%' AND city NOT LIKE 'O%' AND city NOT LIKE 'U%';  
+2)We define an employee's total earnings to be their monthly  worked, and the maximum total earnings to be the maximum total earnings for any employee in the Employee table. 
+Write a query to find the maximum total earnings for all employees as well as the total number of employees who have maximum total earnings. Then print these values as  space-separated integers.
+ans: SELECT MAX(months * salary) AS max_total_earnings, COUNT(*) AS employee_count
+FROM employee
+WHERE months * salary = (SELECT MAX(months * salary) FROM employee);  
+
+3)Query the sum of Northern Latitudes (LAT_N) from STATION having values greater than  38.7880 and less than  137.2345. Truncate your answer to  decimal places.
+ans: select round(sum(LAT_N),4) from station where LAT_N> 38.7880 and  LAT_N<137.2345; 
+
+4)Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is less than . Truncate your answer to  decimal places.   
+ans: select round(max(LAT_N),4) from station where LAT_N<137.2345;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

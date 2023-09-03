@@ -1,0 +1,122 @@
+App.js
+
+import logo from './logo.svg';
+import './App.css';
+import UserDetails from './componentlayer/UserDetails';
+import UserCreation from './componentlayer/UserCreation';
+import StateExample from './componentlayer/StateExample';
+
+function App() {
+  return (
+    <div>
+      <UserDetails name='Besant'/>
+      <UserCreation age='24' />
+      <StateExample />
+    </div>
+  );
+
+}
+
+export default App;
+
+
+Functional Component Example :
+
+import React from 'react'
+
+function UserDetails(props) {
+    return (
+        <div>
+            <h1>User Details {props.name}</h1>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Male</td>
+
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>Gayat</td>
+                    <td>Male</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>Ram</td>
+                    <td>Male</td>
+                    <td>23</td>
+                </tr>
+            </table>
+        </div>
+    )
+}
+
+export default UserDetails;
+
+
+Class Component Example :
+
+import React, {Component} from "react";
+
+class UserCreation extends Component{
+    render(){
+        return(
+            <div>
+                <h1>User Creation</h1>
+                <p>{this.props.age}</p>
+            </div>
+        );
+    }
+}
+
+export default UserCreation;
+
+
+State Example :
+
+import React, { Component } from "react";
+
+class StateExample extends Component {
+
+    constructor() {
+        super();
+
+        this.state = {
+            displayBio: true
+        }
+    }
+
+    hideBio(){
+        this.setState({
+            displayBio : false
+        })
+    }
+
+    showBio(){
+        this.setState({
+            displayBio : true
+        })
+    }
+
+    render() {
+
+        const bio = this.state.displayBio ?
+            (<div> <h1>React Js</h1> <p>This is one of the frame work for JavaScript.</p> </div>)
+            : null;
+
+        return (
+            <div>
+                <h1>State Example</h1>
+                <button onClick={this.hideBio.bind(this)}>Hide</button>
+                <button onClick={this.showBio.bind(this)}>Show</button>
+                {bio}
+            </div>
+        );
+    }
+}
+
+export default StateExample;
